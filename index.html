@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        #caixa{
+            
+            display: flex;
+            margin-top: 150px;
+            margin-left: 150px;
+             display: none;
+        }
+        #busca{
+            margin-top: 100px;
+            margin-left: 150px;
+           
+        }
+        #contener{
+            margin-top: auto;
+            background-color: rgb(241, 229, 227);
+        }
+        #pergutA{
+            cursor: pointer;
+        }
+        #pergutB{
+            cursor: pointer;
+        }
+        #pergutC{
+            cursor: pointer;
+        }
+        #pergutD{
+            cursor: pointer;
+        }
+        #busca{
+            cursor: pointer;
+            height: 50px;
+            width: 170px;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        marquee{
+            background-color: rgb(242, 24, 24);
+            font-size: 25px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <br>
+    <div align=center>Visualizações&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://www.counter12.com/img-Z978721Y0dY2Y266-54.gif' border='0' alt='contador gratuito de visitas'></a><script type='text/javascript' src='https://www.counter12.com/ad.js?id=Z978721Y0dY2Y266'></script><br><a href='https://meuip.page/qual-e-o-meu-ip/' target='_blank'></a></div>
+    <br>
+    <br>
+    <marquee behavior="" direction="">Edu.App&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WhatsApp&nbsp;&nbsp;&nbsp;81984242796</marquee><br>
+    
+    <div id="contener">
+        <h1 id="resp">click no botão para iniciar</h1>
+       <div id="caixa">
+        
+        <table>
+            <tr>
+                <td>
+                    <button id="pergutA" onclick="respostaA()"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="pergutB" onclick="respostaB()"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="pergutC" onclick="respostaC()"></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="pergutD" onclick="respostaD()"></button>
+                </td>
+            </tr>
+        </table>
+     <br><br>
+        
+    </div>
+     <button id="busca" onclick="busca()">Iniciar Quiz</button>
+    </div>
+    
+    
+    <script>
+        
+
+        var nome=prompt("Coloque seu Nome")
+
+        let perg1=[
+            "1) Qual o nome e a idade da pessoa mais velha mencionada na Bíblia?",
+            "2) Qual desses não teve o seu nome mudado na Bíblia?",
+            "3. Qual dos nomes de Deus Moisés deveria dar aos israelitas, quando falasse de quem tinha lhe enviado?",
+            "4. Sobre Samuel, o que não é verdade?",
+            "5. Que animal falou com Balaão?",
+            "6. Enquanto pastor de ovelhas, Davi protegeu seu rebanho de dois animais perigosos. Quais?",
+            "7. Quando bebê, como Moisés foi salvo do decreto infanticida do Faraó?",
+            "8. Quantos eram os discípulos mais próximos de Jesus?",
+            "9. Complete o versículo: Porque Deus tanto amou o mundo...",
+            "10. Qual o nome da ilha onde João escreveu o livro de Apocalipse?",
+            "11. Qual o nome do jardim plantado por Deus para o 1º casal criado?",
+             "12. Em quais livros da Bíblia é narrada a história do nascimento de Jesus?",
+             "13. Quantos casais humanos entraram na arca de Noé?",
+             "14. Qual dos discípulos negou a Jesus?",
+             "15. Qual o nome da cidade fundada por Caim, depois que saiu da presença de Deus?",
+             "16. Deus mandou que Abraão olhasse para o quê, quando lhe fez uma promessa?",
+             "17. Judas traiu a Jesus por qual valor?",
+             "18. Quem eram os dois irmãos de Moisés?",
+             "19. Quem foi o juiz hebreu que Dalila seduziu para entregar ao exército filisteu?",
+             "20. Como e onde aconteceu a conversão de Paulo?",
+             
+        
+        ]
+    let respA=[
+        "A) Enos, ",
+        "A) Sara",
+        "A) Elohim",
+        "A) Sua mãe se chamava Ana",
+        "A) jumenta",
+        "A) serpente e dromedário",
+        "A) Foi levado às pressas para fora do Egito",
+        "A) 10",
+        "A) que deu o seu Filho Unigênito, para que todo o que nele crer não pereça, mas tenha a vida eterna. João 3:16",
+        "A) Ilha de Creta",
+        "A) Jardim do Getsêmani",
+        "A) Gênesis e Salmos",
+        "A) 4 casais",
+        "A) Judas Iscariotes",
+        "A) Sodoma",
+        "A) Para o arco-íris no céu, símbolo da aliança com Abraão",
+        "A) 30 moedas de prata",
+        "A) Esaú e Jacó",
+        "A) Sansão",
+        "A) Foi chamado enquanto pescava junto de outros pescadores, no mar da Galiléia",
+        
+        
+
+    ]
+    let respB=[
+   
+       "B) Noé, ",
+        "B) Abraão",
+        "B) El Shadday",
+        "B) Ungiu 3 reis de Israel: José, Saul e Davi",
+        "B) camelo",
+        "B) urso e leão",
+        "B) Foi escondido dentro de uma caverna",
+        "B) 7",
+        "B) que enviou seu filho ao mundo, para que o mundo fosse salvo por ele. Jo. 6:16",
+        "B) Ilha de Malta",
+        "B) Rosa de Sarom",
+        "B) Mateus e Marcos",
+        "B) 1 casal",
+        "B) João",
+        "B) Gomorra",
+        "B) Para a areia do mar, para que contasse os grãos de areia, se pudesse",
+        "B) 100 moedas de ouro",
+        "B) Miriã e Arão",
+        "B) Salomão",
+        "B) Teve um sonho à noite, enquanto dormia na cidade de Tarso",
+        
+
+
+    ]
+    let respC=[
+       "C) Matusalém, ",
+       "C) Jacó",
+       "C)Eu sou o que sou",
+       "C) Sucedeu o profeta Eli",
+       "C) cordeiro",
+       "C) cobra e lobo",
+       "C) Foi colocado num cesto e lançado no rio",
+       "C) 5",
+       "C) ao ponto de sermos chamados filhos seus, e de fato somos. 1 Jo. 3:1",
+       "C) Ilha de Patmos",
+       "C) Jardim do Éden",
+       "C) Hebreus e Apocalipse",
+       "C) 6 casais",
+       "C) Pedro",
+       "C) Enoque",
+       "C) Para as estrelas do céu, para que as contasse, se pudesse",
+       "C) 50 moedas de prata",
+       "C) Josué e Calebe",
+       "C) Samuel",
+       "C) Durante a pregação das Escrituras, na Sinagoga em Jerusalém",
+       
+
+    ]
+    let respD=[
+       "D) Rainha Ester, ",
+       "D) Davi",
+       "D) Eu sou o Senhor",
+       "D) Teve uma visão enquanto ainda era muito novo",
+       "D) pomba",
+       "D) urso e escorpião",
+       "D) Foi levado ao templo para servir a Deus",
+       "D) 12",
+       "D) que veio para o que era seu, mas o seus não o receberam. Jo. 1:11",
+       "D) Ilha de Pérgamo",
+       "D) Paraíso",
+       "D) Mateus e Lucas",
+       "D) 3 casais",
+       "D) Bartolomeu",
+       "D) Canaã",
+       "D) Para a floresta da terra prometida, para contar as árvores frutíferas",
+       "D) 30 moedas de ouro",
+       "D) Priscila e Áquila",
+       "D) Saul",
+       "D) Teve uma visão depois de cair por terra, perto de Damasco",
+       
+      
+    ]
+
+    let acerto=[
+        "c",
+        "d",
+        "c",
+        "b",
+        "a",
+        "b",
+        "c",
+        "d",
+        "a",
+        "c",
+        "c",
+        "d",
+        "a",
+        "c",
+        "c",
+        "c",
+        "a",
+        "b",
+        "a",
+        "d",
+        
+
+
+    ];
+    var posicion=0;
+    var pontos=0;
+
+
+       function busca(){
+        document.getElementById("caixa").style.display="block"
+        document.getElementById("pergutA").style.backgroundColor="white";
+        document.getElementById("pergutC").style.backgroundColor="white";
+        document.getElementById("pergutB").style.backgroundColor="white";
+        document.getElementById("pergutD").style.backgroundColor="white";
+        document.getElementById("contener").style.backgroundColor="white";
+        
+        if(posicion==20){
+            document.getElementById("caixa").style.display="none"
+            document.getElementById("busca").textContent="Iniciar Quiz"
+            document.getElementById("resp").textContent="Fim de Quiz. você"+"  "+ nome+"  "+"  "+"fez"+"   "+pontos+"  "+"pontos" 
+            document.getElementById("pergutA").disabled=false
+        document.getElementById("pergutB").disabled=false
+        document.getElementById("pergutD").disabled=false
+        document.getElementById("pergutC").disabled=false
+            posicion=0
+
+
+        }else{
+        document.getElementById("resp").textContent=perg1[posicion]
+        document.getElementById("busca").style.display="none"
+        document.getElementById("pergutA").textContent=respA[posicion]
+        document.getElementById("pergutB").textContent=respB[posicion]
+        document.getElementById("pergutC").textContent=respC[posicion]
+        document.getElementById("pergutD").textContent=respD[posicion]
+        document.getElementById("pergutA").disabled=false
+        document.getElementById("pergutB").disabled=false
+        document.getElementById("pergutD").disabled=false
+        document.getElementById("pergutC").disabled=false
+        
+       
+     }
+     if(pontos==20){
+        pontos=0;
+     }
+
+       }
+
+       function respostaA(){
+        document.getElementById("busca").textContent="Proximo"
+        document.getElementById("busca").style.display="block"
+        
+       if(acerto[posicion]=="a"){
+        document.getElementById("pergutA").style.backgroundColor="green";
+        document.getElementById("pergutC").style.backgroundColor="red";
+        document.getElementById("pergutB").style.backgroundColor="red";
+        document.getElementById("pergutD").style.backgroundColor="red";
+        document.getElementById("pergutA").disabled=true
+        document.getElementById("pergutB").disabled=true
+        document.getElementById("pergutD").disabled=true
+        document.getElementById("pergutC").disabled=true
+        document.getElementById("contener").style.backgroundColor="green";
+       
+        pontos=1+pontos
+
+
+        posicion=1+posicion
+       }else{
+        document.getElementById("pergutA").style.backgroundColor="red";
+        document.getElementById("pergutA").disabled=true
+        document.getElementById("pergutB").disabled=true
+        document.getElementById("pergutD").disabled=true
+        document.getElementById("pergutC").disabled=true
+        document.getElementById("contener").style.backgroundColor="red";
+        posicion=1+posicion
+    
+    }
+        
+       }
+
+
+       function respostaB(){
+        document.getElementById("busca").textContent="Proximo"
+        document.getElementById("busca").style.display="block"
+        if(acerto[posicion]=="b"){
+        document.getElementById("pergutB").style.backgroundColor="green";
+        document.getElementById("pergutA").style.backgroundColor="red";
+        document.getElementById("pergutC").style.backgroundColor="red";
+         document.getElementById("pergutD").style.backgroundColor="red";
+         document.getElementById("pergutA").disabled=true
+        document.getElementById("pergutB").disabled=true
+        document.getElementById("pergutD").disabled=true
+        document.getElementById("pergutC").disabled=true
+        document.getElementById("contener").style.backgroundColor="green";
+        pontos=1+pontos
+         posicion=1+posicion
+       }else{
+        document.getElementById("pergutB").style.backgroundColor="red";
+        document.getElementById("pergutA").disabled=true
+        document.getElementById("pergutB").disabled=true
+        document.getElementById("pergutD").disabled=true
+        document.getElementById("pergutC").disabled=true
+        document.getElementById("contener").style.backgroundColor="red";
+        posicion=1+posicion
+    }
+
+    }
+
+    function respostaC(){
+        document.getElementById("busca").textContent="Proximo"
+        document.getElementById("busca").style.display="block"   
+        if(acerto[posicion]=="c"){
+        document.getElementById("pergutC").style.backgroundColor="green";
+        document.getElementById("pergutA").style.backgroundColor="red";
+        document.getElementById("pergutB").style.backgroundColor="red";
+        document.getElementById("pergutD").style.backgroundColor="red";
+        document.getElementById("pergutA").disabled=true
+        document.getElementById("pergutB").disabled=true
+        document.getElementById("pergutD").disabled=true
+        document.getElementById("pergutC").disabled=true
+        document.getElementById("contener").style.backgroundColor="green";
+        pontos=1+pontos
+
+
+        posicion=1+posicion
+       }else{
+        document.getElementById("pergutC").style.backgroundColor="red";
+        document.getElementById("pergutA").disabled=true
+        document.getElementById("pergutB").disabled=true
+        document.getElementById("pergutD").disabled=true
+        document.getElementById("pergutC").disabled=true
+        document.getElementById("contener").style.backgroundColor="red";
+        posicion=1+posicion
+    }
+
+        
+    }
+
+    function respostaD(){
+        document.getElementById("busca").textContent="Proximo"
+        document.getElementById("busca").style.display="block"
+        if(acerto[posicion]=="d"){
+        document.getElementById("pergutD").style.backgroundColor="green";
+        document.getElementById("pergutA").style.backgroundColor="red";
+        document.getElementById("pergutB").style.backgroundColor="red";
+        document.getElementById("pergutC").style.backgroundColor="red";
+        document.getElementById("pergutA").disabled=true
+        document.getElementById("pergutB").disabled=true
+        document.getElementById("pergutD").disabled=true
+        document.getElementById("pergutC").disabled=true
+        document.getElementById("contener").style.backgroundColor="green";
+        pontos=1+pontos
+       
+        posicion=1+posicion
+       }else{
+        document.getElementById("pergutD").style.backgroundColor="red";
+        document.getElementById("pergutA").disabled=true
+        document.getElementById("pergutB").disabled=true
+        document.getElementById("pergutD").disabled=true
+        document.getElementById("pergutC").disabled=true
+        document.getElementById("contener").style.backgroundColor="red";
+        posicion=1+posicion
+    
+    }
+
+    }
+    
+       
+    </script>
+</body>
+</html>
